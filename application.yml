@@ -3,7 +3,7 @@ eureka:
     region: default
     registry-fetch-interval-seconds: 5
     service-url:
-      defaultZone: http://localhost:8081/eureka/
+      defaultZone: http://eureka-service:8081/eureka/
 
 spring:
   datasource:
