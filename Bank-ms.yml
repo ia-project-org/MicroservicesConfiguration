@@ -11,3 +11,7 @@ server:
 product:
   service:
     message: "Bienvenue dans Bank ms !"
+
+app:
+  file:
+    path: src/main/resources/static/clientsDetails.csv
