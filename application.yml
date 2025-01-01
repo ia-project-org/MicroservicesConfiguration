@@ -4,6 +4,8 @@ eureka:
     registry-fetch-interval-seconds: 5
     service-url:
       defaultZone: http://eureka-service:8081/eureka/
+  instance:
+    prefer-ip-address: true
 
 spring:
   datasource:
