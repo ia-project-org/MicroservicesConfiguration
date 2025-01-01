@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: config-server
-          image: minaouimh/ai:ConfigServer-5
+          image: minaouimh/ai:ConfigServer-7
           ports:
             - containerPort: 8888
       imagePullSecrets:
