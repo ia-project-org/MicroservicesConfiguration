@@ -27,3 +27,8 @@ logging:
     com.netflix.loadbalancer: DEBUG
     com.netflix.niws.client: DEBUG
     com.netflix.discovery: INFO
+
+
+app:
+  file:
+    path: src/main/resources/static/clientsDetails.csv
