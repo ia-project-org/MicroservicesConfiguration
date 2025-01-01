@@ -1,26 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api-gateway-deployment
-  labels:
-    app: api-gateway
+  name: config-server
+  namespace: web
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: api-gateway
+      app: config-server
   template:
     metadata:
       labels:
-        app: api-gateway
+        app: config-server
     spec:
       containers:
-        - name: api-gateway
-          image: minaouimh/ai:ApiGateway-10
+        - name: config-server
+          image: minaouimh/ai:ConfigServer-5
           ports:
-            - containerPort: 9004
-          env:
-            - name: SPRING_PROFILES_ACTIVE
-              value: "prod"  # Activate production profile
+            - containerPort: 8888
       imagePullSecrets:
         - name: docker-registry-secret
