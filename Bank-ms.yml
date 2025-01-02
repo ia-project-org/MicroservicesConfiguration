@@ -1,9 +1,9 @@
-spring:
-  batch:
-    jdbc:
-      initialize-schema: always
-    job:
-      enabled: false
+#spring:
+#  batch:
+#    jdbc:
+#      initialize-schema: always
+#    job:
+#      enabled: false
 
 server:
   port: 9001
@@ -12,6 +12,6 @@ product:
   service:
     message: "Bienvenue dans Bank ms !"
 
-app:
-  file:
-    path: src/main/resources/static/clientsDetails.csv
+#app:
+#  file:
+#    path: src/main/resources/static/clientsDetails.csv
