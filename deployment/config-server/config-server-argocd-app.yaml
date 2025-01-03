@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: config-server
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/ia-project-org/MicroservicesConfiguration.git
+    targetRevision: main
+    path: deployment/config-server
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: web
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
