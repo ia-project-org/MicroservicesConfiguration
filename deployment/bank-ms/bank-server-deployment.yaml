@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: bank-ms
-          image: minaouimh/ai:Bank-ms-30 # Replace with your actual Docker image name
+          image: minaouimh/ai:Bank-ms-31
           ports:
             - containerPort: 9001
           env:
