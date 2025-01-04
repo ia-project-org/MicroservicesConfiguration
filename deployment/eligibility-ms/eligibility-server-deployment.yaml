@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eligibility-ms
+  namespace: web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eligibility-ms
+  template:
+    metadata:
+      labels:
+        app: eligibility-ms
+    spec:
+      containers:
+        - name: eligibility-ms
+          image: minaouimh/ai:Eligibility-ms-11
+          ports:
+            - containerPort: 9003
+          env:
+            - name: CONFIG_SERVER_URI
+              value: http://34.41.170.207:32002  # Set the dynamic value for config-server
+            - name: CROS_URL
+              value: http://34.41.170.207:30001
+      imagePullSecrets:
+        - name: docker-registry-secret  # Secret for private Docker image

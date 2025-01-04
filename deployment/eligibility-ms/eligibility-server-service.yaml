@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: eligibilty-service
+  namespace: web
+spec:
+  selector:
+    app: eligibility-ms
+  ports:
+    - protocol: TCP
+      port: 9003  # This should match the port your app listens on (configured in your application properties)
+      targetPort: 9003
+      nodePort: 32006  # Optional: Specify a specific port (30000-32767 range)
+  type: NodePort  # You can change this to NodePort or LoadBalancer based on your needs
