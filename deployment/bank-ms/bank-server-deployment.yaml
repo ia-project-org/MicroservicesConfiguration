@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bank-ms
+  namespace: web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bank-ms
+  template:
+    metadata:
+      labels:
+        app: bank-ms
+    spec:
+      containers:g
+        - name: bank-ms
+          image: minaouimh/ai:Bank-ms-30 # Replace with your actual Docker image name
+          ports:
+            - containerPort: 9001
+          env:
+            - name: CONFIG_SERVER_URI
+              value: http://34.41.170.207:32002  # Set the dynamic value for config-server
+      imagePullSecrets:
+        - name: docker-registry-secret  # Secret for private Docker image (if needed)
