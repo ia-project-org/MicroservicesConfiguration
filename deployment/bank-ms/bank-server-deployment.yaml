@@ -13,7 +13,7 @@ spec:
       labels:
         app: bank-ms
     spec:
-      containers:g
+      containers:
         - name: bank-ms
           image: minaouimh/ai:Bank-ms-30 # Replace with your actual Docker image name
           ports:
