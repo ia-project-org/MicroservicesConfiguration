@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: bank-ms
-          image: minaouimh/ai:Bank-ms-35
+          image: minaouimh/ai:Bank-ms-36
           ports:
             - containerPort: 9001
           env:
