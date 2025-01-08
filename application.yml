@@ -1,18 +1,30 @@
 eureka:
   client:
-    region: default
-    registry-fetch-interval-seconds: 5
-    service-url:
-      defaultZone: http://eureka-service:8081/eureka/
+    serviceUrl:
+      defaultZone: https://eureka-server-discovery.onrender.com/eureka/
+    fetch-registry: true
+    register-with-eureka: true
   instance:
-    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 30
+    leaseExpirationDurationInSeconds: 90
+    hostname: microservicesconfiguration-a3y7.onrender.com
+    preferIpAddress: false
+    securePortEnabled: true
+    nonSecurePortEnabled: false
+    securePort: 443
+    instanceId: ${spring.application.name}:${random.uuid}
+    statusPageUrl: https://${eureka.instance.hostname}/actuator/info
+    healthCheckUrl: https://${eureka.instance.hostname}/actuator/health
+    homePageUrl: https://${eureka.instance.hostname}/
+    metadataMap:
+      instanceId: ${spring.application.name}:${random.uuid}
 
 spring:
   datasource:
     driver-class-name: ${SPRING_DATASOURCE_DRIVER_CLASS_NAME:org.postgresql.Driver}
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://postgres-client-service:5432/clientside}
-    username: ${SPRING_DATASOURCE_USERNAME:myuser}
-    password: ${SPRING_DATASOURCE_PASSWORD:mypassword}
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://citythrillsdb_user:YVXb8u1Uj7QP8YDMJdHC8r3Y1nvKYnVz@dpg-ctkvo1tds78s73c328p0-a/citythrillsdb}
+    username: ${SPRING_DATASOURCE_USERNAME:citythrillsdb_user}
+    password: ${SPRING_DATASOURCE_PASSWORD:YVXb8u1Uj7QP8YDMJdHC8r3Y1nvKYnVz}
   jpa:
     database-platform: ${SPRING_JPA_DATABASE_PLATFORM:org.hibernate.dialect.PostgreSQLDialect}
     hibernate:
