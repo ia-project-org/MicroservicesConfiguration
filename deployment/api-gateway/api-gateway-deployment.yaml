@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: api-gateway
-          image: minaouimh/ai:ApiGateway-19
+          image: minaouimh/ai:ApiGateway-20
           ports:
             - containerPort: 9004
           env:
