@@ -7,7 +7,6 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 30
     leaseExpirationDurationInSeconds: 90
-    hostname: microservicesconfiguration-a3y7.onrender.com
     preferIpAddress: false
     securePortEnabled: true
     nonSecurePortEnabled: false
