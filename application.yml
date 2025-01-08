@@ -21,7 +21,7 @@ eureka:
 spring:
   datasource:
     driver-class-name: ${SPRING_DATASOURCE_DRIVER_CLASS_NAME:org.postgresql.Driver}
-    url: ${SPRING_DATASOURCE_URL:postgresql://citythrillsdb_user:YVXb8u1Uj7QP8YDMJdHC8r3Y1nvKYnVz@dpg-ctkvo1tds78s73c328p0-a/citythrillsdb}
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://citythrillsdb_user:YVXb8u1Uj7QP8YDMJdHC8r3Y1nvKYnVz@dpg-ctkvo1tds78s73c328p0-a.oregon-postgres.render.com/citythrillsdb}
     username: ${SPRING_DATASOURCE_USERNAME:citythrillsdb_user}
     password: ${SPRING_DATASOURCE_PASSWORD:YVXb8u1Uj7QP8YDMJdHC8r3Y1nvKYnVz}
   jpa:
