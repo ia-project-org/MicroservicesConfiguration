@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: eligibility-ms
-          image: minaouimh/ai:Eligibility-ms-19
+          image: minaouimh/ai:Eligibility-ms-20
           ports:
             - containerPort: 9003
           env:
