@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: eureka-server
-          image: minaouimh/ai:eureka-server-discovery-13
+          image: minaouimh/ai:eureka-server-discovery-14
           ports:
             - containerPort: 8081
       imagePullSecrets:
